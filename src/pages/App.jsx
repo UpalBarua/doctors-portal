@@ -1,15 +1,9 @@
 import React from 'react';
+import { RouterProvider } from 'react-router-dom';
+import router from '../routes/Routes';
 
 function App() {
-  return (
-    <div className="container flow">
-      <button className="btn">Get Started</button>
-      <button className="btn">Get Started</button>
-      <button className="btn">Get Started</button>
-      <button className="btn">Get Started</button>
-      <button className="btn">Get Started</button>
-    </div>
-  );
+  return <RouterProvider router={router}></RouterProvider>;
 }
 
 export default App;
