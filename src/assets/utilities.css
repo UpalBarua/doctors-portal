@@ -36,4 +36,12 @@
   letter-spacing: 1px;
   color: var(--clr-light-400);
   background-color: var(--clr-accent-primary-400);
+  cursor: pointer;
+  transition: background-color 350ms ease-out;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  outline: 0;
+  background-color: var(--clr-accent-primary-500);
 }
