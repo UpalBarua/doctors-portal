@@ -2,8 +2,12 @@ import React from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello world!</h1>
+    <div className="container flow">
+      <button className="btn">Get Started</button>
+      <button className="btn">Get Started</button>
+      <button className="btn">Get Started</button>
+      <button className="btn">Get Started</button>
+      <button className="btn">Get Started</button>
     </div>
   );
 }

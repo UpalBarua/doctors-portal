@@ -27,13 +27,13 @@
   --clr-light-500: #f6f7f9;
   --clr-light-600: #eceef2;
 
-  --clr-accent-primary-300: #50f8d1;
-  --clr-accent-primary-400: #19d3ae;
-  --clr-accent-primary-400: #50f8d1;
+  --clr-accent-primary-300: #65eafb;
+  --clr-accent-primary-400: #0fcfec;
+  --clr-accent-primary-500: #03b8d7;
 
-  --clr-accent-secondary-300: #65eafb;
-  --clr-accent-secondary-400: #0fcfec;
-  --clr-accent-secondary-500: #03b8d7;
+  --clr-accent-secondary-300: #50f8d1;
+  --clr-accent-secondary-400: #19d3ae;
+  --clr-accent-secondary-400: #50f8d1;
 
   /* SPACING */
   --spacing-100: 0.25rem;
@@ -49,6 +49,7 @@
   /* MISCELLANEOUS */
   --box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   --border-radius: 0.5rem;
+  --flow: var(--spacing-500);
 }
 
 /* ******************** */
@@ -71,6 +72,13 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: black;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.1;
 }
 
 img,

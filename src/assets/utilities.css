@@ -1,0 +1,39 @@
+/* ******************** */
+/* UTILITIES            */
+/* ******************** */
+.container {
+  max-width: min(70rem, 100% - 20px);
+  margin-inline: auto;
+}
+
+.flow > * + * {
+  margin-top: var(--flow, 1rem);
+}
+
+.title-primary {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-600);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 1px;
+  color: var(--clr-accent-primary-400);
+}
+
+.title-secondary {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-700);
+  font-weight: var(--fw-regular);
+  color: var(--clr-dark-400);
+}
+
+.btn-primary {
+  min-width: 6rem;
+  padding: var(--spacing-200);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-300);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--clr-light-400);
+  background-color: var(--clr-accent-primary-400);
+}
