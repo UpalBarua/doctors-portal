@@ -2,7 +2,7 @@
 /* HERO                 */
 /* ******************** */
 .hero {
-  padding-block: var(--spacing-600);
+  padding-block: var(--spacing-800);
   background-image: url('../../../assets/images/bg.png');
   background-size: cover;
   background-position: center;

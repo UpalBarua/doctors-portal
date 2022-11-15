@@ -1,0 +1,36 @@
+/* ******************** */
+/*  ABOUT               */
+/* ******************** */
+.about {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: var(--spacing-500);
+}
+
+.about h2 {
+  font-weight: var(--fw-semibold);
+}
+
+.img {
+  border-radius: var(--border-radius);
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media screen and (min-width: 48em) {
+  .about {
+    --flow: var(--spacing-600);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-800);
+  }
+
+  .img {
+    height: 25rem;
+  }
+
+  .about h2 {
+    width: 80%;
+  }
+}

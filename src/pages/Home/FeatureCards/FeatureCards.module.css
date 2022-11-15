@@ -4,7 +4,6 @@
 .grid {
   display: grid;
   gap: var(--spacing-400);
-  margin-block: var(--spacing-800);
 }
 
 .card {
