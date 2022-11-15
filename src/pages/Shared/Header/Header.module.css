@@ -15,6 +15,7 @@
 .header {
   position: sticky;
   top: 0;
+  z-index: 10;
   background-color: var(--clr-light-400);
   box-shadow: var(--box-shadow);
 }
@@ -31,7 +32,7 @@
   flex-direction: column;
   gap: var(--spacing-500);
   position: fixed;
-  top: 5%;
+  top: calc(10% - 10px);
   left: 0;
   z-index: -10;
   width: 100%;
@@ -40,7 +41,7 @@
   text-transform: capitalize;
   text-align: center;
   background-color: var(--clr-light-400);
-  transform: translateY(-105%);
+  transform: translateY(-110%);
   opacity: 0;
   transition: transform 350ms ease-out, opacity 500ms ease;
 }

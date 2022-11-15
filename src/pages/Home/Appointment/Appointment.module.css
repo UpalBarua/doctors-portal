@@ -1,0 +1,53 @@
+/* ******************** */
+/* APPOINTMENT          */
+/* ******************** */
+.appointment {
+  color: var(--clr-light-400);
+  background-image: url('../../../assets/images/appointment.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-400);
+}
+
+.appointment p:nth-child(2) {
+  color: var(--clr-light-400);
+  font-weight: var(--fw-semibold);
+}
+
+.img {
+  display: none;
+  position: absolute;
+  bottom: 0;
+}
+
+.column:first-child {
+  position: relative;
+}
+
+.column:last-child {
+  padding-block: var(--spacing-700);
+}
+
+@media screen and (min-width: 48em) {
+  .appointment {
+    margin-top: 10%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .img {
+    display: block;
+  }
+
+  .column:last-child {
+    padding-block: var(--spacing-900);
+  }
+}

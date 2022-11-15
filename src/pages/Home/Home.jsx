@@ -3,6 +3,7 @@ import Hero from './Hero/Hero';
 import FeatureCards from './FeatureCards/FeatureCards';
 import Services from './Services/Services';
 import About from './About/About';
+import Appointment from './Appointment/Appointment';
 
 const Home = () => {
   const style = {
@@ -16,6 +17,7 @@ const Home = () => {
       <FeatureCards />
       <Services />
       <About />
+      <Appointment />
     </main>
   );
 };
