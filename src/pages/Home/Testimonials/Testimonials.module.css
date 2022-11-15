@@ -1,0 +1,54 @@
+/* ****************** */
+/* TESTIMONIALS       */
+/* ****************** */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-400);
+}
+
+.header img {
+  width: 5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-500);
+}
+
+.card {
+  border-radius: var(--border-radius);
+  padding: var(--spacing-400);
+  box-shadow: var(--box-shadow);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-300);
+  margin-top: var(--spacing-600);
+}
+
+.user img {
+  width: 3.5rem;
+  height: 3.5;
+  border: 3px solid var(--clr-accent-primary-400);
+  border-radius: 50%;
+}
+
+.username {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-semibold);
+}
+
+@media screen and (min-width: 48em) {
+  .header img {
+    width: 10rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

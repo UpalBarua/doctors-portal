@@ -24,11 +24,12 @@
   font-size: var(--fs-700);
   font-weight: var(--fw-regular);
   line-height: 1.1;
+  text-transform: capitalize;
   color: var(--clr-dark-400);
 }
 
 .btn-primary {
-  min-width: 8rem;
+  min-width: 10rem;
   padding: var(--spacing-200);
   border: 2px solid transparent;
   border-radius: var(--border-radius);

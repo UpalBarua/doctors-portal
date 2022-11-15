@@ -4,6 +4,7 @@ import FeatureCards from './FeatureCards/FeatureCards';
 import Services from './Services/Services';
 import About from './About/About';
 import Appointment from './Appointment/Appointment';
+import Testimonials from './Testimonials/Testimonials';
 
 const Home = () => {
   const style = {
@@ -18,6 +19,7 @@ const Home = () => {
       <Services />
       <About />
       <Appointment />
+      <Testimonials />
     </main>
   );
 };
