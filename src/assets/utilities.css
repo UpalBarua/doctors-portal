@@ -15,6 +15,7 @@
   font-size: var(--fs-600);
   font-weight: var(--fw-semibold);
   letter-spacing: 1px;
+  text-transform: uppercase;
   color: var(--clr-accent-primary-400);
 }
 
@@ -22,11 +23,12 @@
   font-family: var(--ff-secondary);
   font-size: var(--fs-700);
   font-weight: var(--fw-regular);
+  line-height: 1.1;
   color: var(--clr-dark-400);
 }
 
 .btn-primary {
-  min-width: 6rem;
+  min-width: 8rem;
   padding: var(--spacing-200);
   border: 2px solid transparent;
   border-radius: var(--border-radius);

@@ -1,0 +1,34 @@
+/* ******************** */
+/* SERVICES             */
+/* ******************** */
+.services {
+  --flow: var(--spacing-400);
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-500);
+  padding-block: var(--spacing-500);
+}
+
+.card {
+  display: grid;
+  justify-items: center;
+  padding: var(--spacing-700) var(--spacing-500);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.title {
+  padding-top: var(--spacing-400);
+  font-size: var(--fs-600);
+  font-weight: var(--fw-semibold);
+}
+
+@media screen and (min-width: 48em) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
