@@ -1,0 +1,55 @@
+/* ***************** */
+/* APPOINTMENT MODAL */
+/* ***************** */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--spacing-500);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  background-color: var(--clr-light-400);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-500);
+}
+
+.title {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-accent-primary-400);
+}
+
+.toggle {
+  display: grid;
+  padding: var(--spacing-200);
+  border-radius: 50%;
+  border: 0;
+  font-size: var(--fs-600);
+  color: var(--clr-light-400);
+  background-color: var(--clr-dark-400);
+}
+
+@media screen and (min-width: 48em) {
+  .modal {
+    width: 35%;
+    height: max-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: var(--spacing-500);
+    border-radius: var(--border-radius);
+  }
+}

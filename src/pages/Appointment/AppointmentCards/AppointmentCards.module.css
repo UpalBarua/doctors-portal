@@ -1,0 +1,41 @@
+/* ******************** */
+/* APPOINTMENT CARDS    */
+/* ******************** */
+.date {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--fs-600);
+  color: var(--clr-accent-primary-400);
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-500);
+}
+
+.card {
+  --flow: var(--spacing-300);
+  padding: var(--spacing-600);
+  text-align: center;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.title {
+  font-size: var(--fs-600);
+  color: var(--clr-accent-primary-400);
+}
+
+@media screen and (min-width: 35em) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

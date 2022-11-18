@@ -1,0 +1,40 @@
+/* ******************** */
+/* APPOINTMENT HERO     */
+/* ******************** */
+.hero {
+  padding-block: var(--spacing-800);
+  background-image: url('../../../assets/images/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero h1 {
+  font-weight: var(--fw-bold);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-500);
+}
+
+/* .datePicker {
+  max-width: 100%;
+} */
+
+@media screen and (min-width: 48em) {
+  .hero {
+    padding-block: var(--spacing-900);
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .column {
+    order: -1;
+  }
+}

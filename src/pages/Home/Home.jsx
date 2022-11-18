@@ -5,6 +5,7 @@ import Services from './Services/Services';
 import About from './About/About';
 import Appointment from './Appointment/Appointment';
 import Testimonials from './Testimonials/Testimonials';
+import ContactForm from '../Shared/Forms/ContactForm';
 
 const Home = () => {
   const style = {
@@ -20,6 +21,7 @@ const Home = () => {
       <About />
       <Appointment />
       <Testimonials />
+      <ContactForm />
     </main>
   );
 };
