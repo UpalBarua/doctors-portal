@@ -59,3 +59,8 @@
   border-color: var(--clr-dark-400);
   background-color: var(--clr-light-500);
 }
+
+.error {
+  font-size: var(--fs-300);
+  color: #e73a3a;
+}
