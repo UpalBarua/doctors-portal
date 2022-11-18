@@ -1,0 +1,52 @@
+/* ******************** */
+/* LOGIN                */
+/* ******************** */
+.login {
+  width: 25rem;
+  margin-block: var(--spacing-500);
+  padding: var(--spacing-500);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.title {
+  margin-block: var(--spacing-300);
+  font-size: calc(var(--fs-600) + 30%);
+  font-weight: var(--fw-bold);
+  color: var(--clr-accent-primary-400);
+}
+
+.login button {
+  width: 100%;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-400);
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: var(--clr-dark-400);
+}
+
+.redirect {
+  font-size: var(--fs-300);
+}
+
+.redirect > a {
+  color: var(--clr-accent-primary-400);
+  font-weight: var(--fw-semibold);
+}
+
+.redirect > a:hover,
+.redirect > a:focus {
+  outline: 0;
+  text-decoration: 2px underline;
+}

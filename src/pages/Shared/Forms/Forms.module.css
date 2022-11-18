@@ -38,7 +38,7 @@
 }
 
 .input {
-  padding: var(--spacing-300) var(--spacing-200);
+  padding: var(--spacing-200);
   border: 2px solid var(--clr-dark-300);
   border-radius: var(--border-radius);
   resize: none;

@@ -48,3 +48,25 @@
   outline: 0;
   background-color: var(--clr-accent-primary-500);
 }
+
+.btn-secondary {
+  min-width: 10rem;
+  padding: var(--spacing-200);
+  border: 2px solid var(--clr-dark-300);
+  border-radius: var(--border-radius);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-300);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--clr-dark-400);
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 350ms ease-out;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  outline: 0;
+  background-color: var(--clr-dark-400);
+  color: var(--clr-light-400);
+}
