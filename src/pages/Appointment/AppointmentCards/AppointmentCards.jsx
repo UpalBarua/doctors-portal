@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { format } from 'date-fns';
+import { useQuery } from '@tanstack/react-query';
 import styles from './AppointmentCards.module.css';
-import AppointmentModal from '../AppointmentModal/AppointmentModal';
 
 const AppointmentCards = ({
   selectedDate,
@@ -9,13 +9,23 @@ const AppointmentCards = ({
   setSelectedSlot,
   setSelectedService,
 }) => {
-  const [appointmentSlotsData, setAppointmentSlotsData] = useState([]);
+  // TODO : replaced with react query
+  // const [appointmentSlotsData, setAppointmentSlotsData] = useState([]);
 
-  useEffect(() => {
-    fetch('appointmentSlots.json')
-      .then(response => response.json())
-      .then(data => setAppointmentSlotsData(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch('http://localhost:3000/appointment-slots')
+  //     .then((response) => response.json())
+  //     .then((data) => setAppointmentSlotsData(data));
+  // }, []);
+
+  const { data: appointmentSlotsData = [] } = useQuery({
+    queryKey: ['appointmentSlotsData'],
+    queryFn: async () => {
+      const response = await fetch('http://localhost:3000/appointment-slots');
+      const data = await response.json();
+      return data;
+    },
+  });
 
   const handleBookAppointment = (availableSlots, selectedService) => {
     return () => {
@@ -32,7 +42,7 @@ const AppointmentCards = ({
         <span>{format(selectedDate, 'PP')}</span>
       </p>
       <div className={styles.grid}>
-        {appointmentSlotsData.map(data => (
+        {appointmentSlotsData.map((data) => (
           <div className={`${styles.card} | flow`} key={data._id}>
             <h3 className={styles.title}>{data.name}</h3>
             <p>

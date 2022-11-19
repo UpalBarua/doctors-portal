@@ -71,8 +71,16 @@
   cursor: pointer;
 }
 
+.logoutBtn {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
 .toggle:hover,
-.toggle:focus {
+.toggle:focus,
+.logoutBtn:hover,
+.logoutBtn:focus {
   outline: 0;
   color: var(--clr-accent-primary-400);
 }

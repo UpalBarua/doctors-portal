@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { FcMenu } from 'react-icons/fc';
 import { AiOutlineClose } from 'react-icons/ai';
+import { useAuth } from '../../../contexts/AuthContext';
 import styles from './Header.module.css';
 
 const Header = () => {
+  const { user, logOut } = useAuth();
   const [isNavVisible, setIsNavVisible] = useState(false);
 
   const handleNavToggle = () => {
-    setIsNavVisible(prevIsNavVisible => !prevIsNavVisible);
+    setIsNavVisible((prevIsNavVisible) => !prevIsNavVisible);
     document.body.style.overflow = isNavVisible ? 'unset' : 'hidden';
   };
 
@@ -34,9 +36,17 @@ const Header = () => {
           <li className={styles.item}>
             <NavLink to="/contact">contact us</NavLink>
           </li>
-          <li className={styles.item}>
-            <NavLink to="/login">login</NavLink>
-          </li>
+          {user ? (
+            <li className={styles.item}>
+              <button className={styles.logoutBtn} onClick={logOut}>
+                Log Out
+              </button>
+            </li>
+          ) : (
+            <li className={styles.item}>
+              <NavLink to="/login">login</NavLink>
+            </li>
+          )}
         </ul>
         <button className={styles.toggle} onClick={handleNavToggle}>
           {isNavVisible ? <AiOutlineClose /> : <FcMenu />}

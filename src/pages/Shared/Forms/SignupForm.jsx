@@ -1,17 +1,25 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useAuth } from '../../../contexts/AuthContext';
+import { toast } from 'react-hot-toast';
 import styles from './Forms.module.css';
 
 const SignupForm = () => {
+  const { signUp } = useAuth();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const handleSignup = (data) => {
-    console.log(data);
-    console.log(errors);
+  const handleSignup = async (data) => {
+    try {
+      const response = await signUp(data.email, data.password);
+      toast.success('Sign Up Successful');
+    } catch (error) {
+      toast.error(error.message);
+    }
   };
 
   return (
@@ -54,14 +62,15 @@ const SignupForm = () => {
               value: 6,
               message: 'Password must be at least 6 characters long',
             },
-            validate: {
-              hasOneDigit: (value) =>
-                /(?=.*?[#?!@$%^&*-])/.test(value) ||
-                'Password must contain at least one digit',
-              hasOneSpecialChar: (value) =>
-                /(?=.*?[#?!@$%^&*-])/.test(value) ||
-                'Password must contain at least one special character',
-            },
+            // TODO : uncomment this!
+            // validate: {
+            //   hasOneDigit: (value) =>
+            //     /(?=.*?[#?!@$%^&*-])/.test(value) ||
+            //     'Password must contain at least one digit',
+            //   hasOneSpecialChar: (value) =>
+            //     /(?=.*?[#?!@$%^&*-])/.test(value) ||
+            //     'Password must contain at least one special character',
+            // },
           })}
         />
         <span className={styles.error}>{errors?.password?.message}</span>
